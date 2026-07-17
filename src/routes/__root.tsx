@@ -77,14 +77,22 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Sushi Honke — Fresh Japanese Dining in Calamvale" },
+      {
+        name: "description",
+        content:
+          "Premium sushi, sashimi, ramen and Japanese favourites at Sushi Honke — a modern sushi train experience at Calamvale Central, Brisbane. Dine in or takeaway.",
+      },
+      { name: "author", content: "Sushi Honke" },
+      { property: "og:title", content: "Sushi Honke — Fresh Japanese Dining in Calamvale" },
+      {
+        property: "og:description",
+        content:
+          "Authentic Japanese cuisine, fresh every day. Sushi train, sashimi, ramen and more at Calamvale Central.",
+      },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Sushi Honke" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
@@ -92,6 +100,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&family=Shippori+Mincho:wght@400;600&display=swap",
+      },
     ],
   }),
   shellComponent: RootShell,
