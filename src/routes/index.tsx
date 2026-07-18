@@ -17,7 +17,7 @@ export const Route = createFileRoute("/")({
           "Premium sushi, sashimi, ramen and Japanese favourites at Sushi Honke — a modern sushi train experience at Calamvale Central, Brisbane.",
       },
       { property: "og:title", content: "Sushi Honke — Fresh Japanese Dining in Calamvale" },
-      { property: "og:description", content: "Authentic Japanese cuisine, fresh every day at Calamvale Central." },
+      { property: "og:description", content: "Premium sushi, sashimi, ramen and Japanese favourites at Sushi Honke — a modern sushi train experience at Calamvale Central, Brisbane." },
     ],
     links: [
       { rel: "canonical", href: "/" },

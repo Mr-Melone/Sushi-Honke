@@ -82,18 +82,22 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Premium sushi, sashimi, ramen and Japanese favourites at Sushi Honke — a modern sushi train experience at Calamvale Central, Brisbane. Dine in or takeaway.",
+          "Premium sushi, sashimi, ramen and Japanese favourites at Sushi Honke — a modern sushi train experience at Calamvale Central, Brisbane.",
       },
       { name: "author", content: "Sushi Honke" },
       { property: "og:title", content: "Sushi Honke — Fresh Japanese Dining in Calamvale" },
       {
         property: "og:description",
         content:
-          "Authentic Japanese cuisine, fresh every day. Sushi train, sashimi, ramen and more at Calamvale Central.",
+          "Premium sushi, sashimi, ramen and Japanese favourites at Sushi Honke — a modern sushi train experience at Calamvale Central, Brisbane.",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Sushi Honke" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Sushi Honke — Fresh Japanese Dining in Calamvale" },
+      { name: "twitter:description", content: "Premium sushi, sashimi, ramen and Japanese favourites at Sushi Honke — a modern sushi train experience at Calamvale Central, Brisbane." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/dfc57d2f-dbd0-421c-bff9-60600fc8a50c/id-preview-d42957f0--fe2341d9-b34c-4618-bbba-b34867c9ff1c.lovable.app-1784348189458.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/dfc57d2f-dbd0-421c-bff9-60600fc8a50c/id-preview-d42957f0--fe2341d9-b34c-4618-bbba-b34867c9ff1c.lovable.app-1784348189458.png" },
     ],
     links: [
       {
