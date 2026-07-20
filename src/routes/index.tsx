@@ -4,7 +4,9 @@ import dishAburi from "@/assets/dish-aburi.jpg";
 import dishRamen from "@/assets/dish-ramen.jpg";
 import dishKaraage from "@/assets/dish-karaage.jpg";
 import dishGyoza from "@/assets/dish-gyoza.jpg";
-import { FeatureCard } from "@/components/site-chrome";
+import dishSashimi from "@/assets/dish-sashimi.jpg";
+import dishRolls from "@/assets/dish-rolls.jpg";
+import { SushiTrain } from "@/components/sushi-train";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -149,16 +151,22 @@ function Home() {
               Chef's <span className="italic text-primary">recommendations</span>.
             </h2>
             <p className="max-w-sm text-muted-foreground">
-              Signature dishes our regulars come back for — and first-timers never forget.
+              Signature dishes gliding past — just like our sushi train.
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-6">
-            <FeatureCard className="md:col-span-4" img={dishAburi} title="Aburi Salmon" sub="Torched · Yuzu Kosho" />
-            <FeatureCard className="md:col-span-2" img={dishGyoza} title="Pork Gyoza" sub="Pan-fried · House sauce" />
-            <FeatureCard className="md:col-span-2" img={dishRamen} title="Tonkotsu Ramen" sub="12hr broth · Ajitama" />
-            <FeatureCard className="md:col-span-4" img={dishKaraage} title="Karaage Don" sub="Crispy · Kewpie · Scallion" />
-          </div>
-          <div className="mt-16 text-center">
+        </div>
+        <SushiTrain
+          dishes={[
+            { img: dishAburi, title: "Aburi Salmon", sub: "Torched · Yuzu Kosho" },
+            { img: dishGyoza, title: "Pork Gyoza", sub: "Pan-fried · House sauce" },
+            { img: dishRamen, title: "Tonkotsu Ramen", sub: "12hr broth · Ajitama" },
+            { img: dishKaraage, title: "Karaage Don", sub: "Crispy · Kewpie · Scallion" },
+            { img: dishSashimi, title: "Sashimi Platter", sub: "Salmon · Tuna · Kingfish" },
+            { img: dishRolls, title: "Signature Rolls", sub: "Hand-cut · Daily" },
+          ]}
+        />
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="mt-8 text-center">
             <Link
               to="/menu"
               className="inline-flex items-center gap-2 border-b border-primary pb-1 text-sm uppercase tracking-[0.28em] text-primary transition-all hover:gap-3"
