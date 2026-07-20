@@ -29,6 +29,7 @@ export function SushiTrain({ dishes }: { dishes: TrainDish[] }) {
     ro.observe(track);
 
     const SPEED = 60; // px per second
+    const HOVER_SPEED = 10; // slow drift on hover
     let last = performance.now();
     let raf = 0;
 
@@ -36,8 +37,9 @@ export function SushiTrain({ dishes }: { dishes: TrainDish[] }) {
       const dt = (now - last) / 1000;
       last = now;
 
-      if (!pausedRef.current && halfWidthRef.current > 0) {
-        offsetRef.current -= SPEED * dt;
+      if (halfWidthRef.current > 0) {
+        const speed = pausedRef.current ? HOVER_SPEED : SPEED;
+        offsetRef.current -= speed * dt;
         if (offsetRef.current <= -halfWidthRef.current) {
           offsetRef.current += halfWidthRef.current;
         }
