@@ -39,9 +39,9 @@ export function SushiTrain({ dishes }: { dishes: TrainDish[] }) {
 
       if (halfWidthRef.current > 0) {
         const speed = pausedRef.current ? HOVER_SPEED : SPEED;
-        offsetRef.current -= speed * dt;
-        if (offsetRef.current <= -halfWidthRef.current) {
-          offsetRef.current += halfWidthRef.current;
+        offsetRef.current += speed * dt;
+        if (offsetRef.current >= 0) {
+          offsetRef.current -= halfWidthRef.current;
         }
       }
       track.style.transform = `translate3d(${offsetRef.current}px,0,0)`;
