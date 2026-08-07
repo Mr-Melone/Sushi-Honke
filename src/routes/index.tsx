@@ -176,6 +176,37 @@ function Home() {
           </div>
         </div>
       </section>
+      {/* REVIEWS */}
+      <section className="relative bg-card py-24 lg:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="mb-16 text-center">
+            <p className="mb-4 text-xs uppercase tracking-[0.32em] text-primary">— Reviews</p>
+            <h2 className="font-display text-4xl font-light leading-tight sm:text-5xl">Loved by locals.</h2>
+            <div className="mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground">
+              <span style={{ color: "var(--gold)" }}>★★★★★</span>
+              <span>Rated by hundreds on Google</span>
+            </div>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              { text: "The freshest sushi in Brisbane south. Aburi salmon is unreal — worth the drive every single time.", name: "Emily R." },
+              { text: "A neighbourhood gem. Sushi train keeps the kids busy while we enjoy sashimi and ramen. Consistently excellent.", name: "Daniel K." },
+              { text: "Beautiful presentation, warm service, and the tonkotsu ramen is deeply comforting. Our new local.", name: "Priya S." },
+              { text: "Fresh, generous portions, and priced fairly. Easy takeaway too. Highly recommend.", name: "Marcus T." },
+            ].map((r) => (
+              <figure key={r.name} className="flex h-full flex-col justify-between rounded-2xl border border-border bg-background p-8">
+                <div>
+                  <div className="mb-4 text-primary">★★★★★</div>
+                  <blockquote className="text-sm leading-relaxed text-foreground">"{r.text}"</blockquote>
+                </div>
+                <figcaption className="mt-6 text-xs uppercase tracking-widest text-muted-foreground">
+                  {r.name} · Google Review
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }
